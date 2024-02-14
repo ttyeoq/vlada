@@ -5,6 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Приглашение на свидание к 14 февраля</title>
+  <style>
+    /* Подключение шрифта Pacifico из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Установка милого бежевого фона */
+body {
+  background-color: #f5e6da;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Стилизация контейнера */
+.container {
+  text-align: center;
+}
+
+/* Применение шрифта к заголовку */
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+}
+
+/* Стилизация кнопок */
+.yes-btn, .no-btn {
+  font-family: 'Pacifico', cursive;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-btn {
+  background-color: #ff8080;
+  color: #fff;
+}
+
+.no-btn {
+  background-color: #80b3ff;
+  color: #fff;
+}
+
+/* Анимация для сердечек */
+.heart {
+  position: absolute;
+  bottom: 0;
+  animation: fly 5s linear forwards;
+}
+
+@keyframes fly {
+  to {
+    transform: translate(-50%, -100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Стилизация сообщения о любви */
+#loveMessage {
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#loveMessage.show {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.valentine-image {
+    max-width: 100%;
+    height: auto;
+  }
+@keyframes runAway {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-20px);
+    }
+    100% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+  }
+  #movingButton {
+    position: absolute;
+    transition: all 0.3s;
+  }
+
+  .heart {
+    position: absolute;
+    color: red; /* Цвет сердечек */
+    font-size: 24px; /* Размер сердечек */
+    animation: float 5s linear infinite; /* Анимация для движения сердечек */
+    bottom: -20px; /* Начальное положение сердец внизу экрана */
+    left: calc(10px + (100vw - 20px) * random()); /* Случайное горизонтальное положение */
+  }
+  
+  @keyframes float {
+    0% {
+      bottom: -10%;
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    100% {
+      bottom: 100%; /* Заканчиваем на верхней границе экрана */
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  </style>
 </head>
 <body>
   <div class="container">
